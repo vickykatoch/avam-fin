@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { AvamWindowChromeModule } from '$avam-window-chrome';
+import { AvamCommonControlsModule } from '$avam-common-controls';
+import { AvamCoreModule } from '$avam-core';
+import { AvamFinModule } from '$avam-fin';
 
 
 @NgModule({
@@ -12,9 +14,14 @@ import { AvamWindowChromeModule } from '$avam-window-chrome';
   ],
   imports: [
     BrowserModule,
-    AvamWindowChromeModule
+    AvamCoreModule,
+    AvamCommonControlsModule,
+    AvamFinModule
   ],
   providers: [],
+  entryComponents : [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

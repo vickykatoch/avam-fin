@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -16,8 +17,14 @@
       "dom"
     ],
     "paths": {
-      "$avam-window-chrome" : [
-        "modules/avam-window-chrome"
+      "$avam-common-controls" : [
+        "modules/avam-common-controls"
+      ],
+      "$avam-core" : [
+        "modules/avam-core"
+      ],
+      "$avam-fin" : [
+        "modules/avam-fin"
       ]
     }
   }

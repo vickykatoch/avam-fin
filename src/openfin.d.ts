@@ -57,6 +57,8 @@ declare namespace fin {
 	 * An object representing an application.Allows the developer to create, execute, show / close an application as well as listen to application events.
 	 */
 	interface OpenFinApplication {
+
+    uuid: string;
 		/**
 		 * Returns an instance of the main Window of the application
 		 */

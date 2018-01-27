@@ -6,9 +6,11 @@ import { AvamWindowChromeComponent } from './avam-window-chrome/avam-window-chro
   imports: [
     CommonModule
   ],
-  declarations: [AvamWindowChromeComponent],
+  declarations: [
+    AvamWindowChromeComponent
+  ],
   exports : [
     AvamWindowChromeComponent
   ]
 })
-export class AvamWindowChromeModule { }
+export class AvamCommonControlsModule { }
