@@ -1,0 +1,80 @@
+:host {
+    --HEADER-HEIGHT : 30px;
+
+    .chrome {
+        height : 100vh;
+        width : 100vw;
+        overflow: hidden;
+    }
+    .chrome header {
+        height: var(--HEADER-HEIGHT);
+        line-height: var(--HEADER-HEIGHT);
+        background: var(--win-title-bg);
+        color: var(--win-title-fg);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+
+        .menu {
+            margin-right: 5px;
+            margin-left: 5px;
+            position: relative;
+            cursor: pointer;
+            opacity: 0.5;
+            &:hover {
+                opacity: 1;
+
+                .win-menu {
+                    display: block;
+                }
+            }
+            .win-menu {
+                display: none;
+                position: absolute;
+                background: var(--gray-900);
+                left: -5px;
+                top : var(--HEADER-HEIGHT);
+                z-index: 10;
+                height: calc(100vh - var(--HEADER-HEIGHT));
+                width: 150px;
+            }
+        }
+
+        .title {
+
+        }
+        .qab {
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+        .chrome-controls {
+            margin-right: 5px;
+            .icon {
+                opacity: 0.5;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+    .chrome .content-host {
+        position: relative;
+
+        .content {
+            position: absolute;
+            left:0;
+            top: 0;
+            bottom: 0;
+            right:0;
+            overflow: auto;
+        }
+
+    }
+    .chrome footer {
+        height: var(--HEADER-HEIGHT);
+        flex-shrink: 0;
+        background: var(--win-title-bg);
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "devtools_port": 9090,
+  "startup_app": {
+    "name": "FIN.PLAYGROUND",
+    "description": "An Openfin Playground",
+    "url": "http://localhost:4200/index.html",
+    "uuid": "FIN.PLAYGROUND",
+    "autoShow": true,
+    "defaultCentered": true,
+    "applicationIcon": "http://localhost:4200/favicon.ico",
+    "frame": true,
+    "defaultTop": 50,
+    "defaultLeft": 10,
+    "defaultHeight": 300,
+    "defaultWidth": 300,
+    "alwaysOnTop": false,
+    "cornerRounding": {
+      "width": 10,
+      "height": 10
+    }
+  },
+  "runtime": {
+    "version": "7.53.20.20",
+    "forceLatest": false
+  },
+  "shortcut": {
+    "company": "XYZ",
+    "description": "FIN Playground",
+    "name": "FINPG",
+    "icon": "http://localhost:4200/favicon.ico"
+  }
+}

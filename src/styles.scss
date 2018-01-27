@@ -1,0 +1,11 @@
+@import "styles/base";
+
+.flex-fill {
+    position: relative;
+    flex-grow: 1;
+}
+body {
+    background: var(--body-bg);
+    color : var(--body-fg);
+    font-size: var(--base-font-size);
+}
