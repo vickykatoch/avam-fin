@@ -25,7 +25,6 @@ export class ComponentManagerService {
           const component = ComponentBuilder.build(vc, compDef, this.injector);
           winHost.provider.contentWindow.document.body.appendChild(component.location.nativeElement);
           this.findStyles(compDef.name).then(styles => {
-            debugger;
             this.appendStyles(winHost.provider, styles);
             winHost.show();
             resolve(true);
