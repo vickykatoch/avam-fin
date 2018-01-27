@@ -25,6 +25,9 @@
       ],
       "$avam-fin" : [
         "modules/avam-fin"
+      ],
+      "$avam-utils" : [
+        "modules/avam-utils"
       ]
     }
   }

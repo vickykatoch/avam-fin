@@ -24,7 +24,7 @@ import { AppTemplateStoreComponent } from './components/app-template-store/app-t
   ],
   providers: [],
   entryComponents : [
-
+    SystemDepthHostComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -8,9 +8,10 @@ export abstract class WindowProvider {
   protected notifier = new Subject<WinMessage>();
   messages$ : Observable<WinMessage> = this.notifier.asObservable();
 
-  constructor(protected provider: any) {
+  constructor(public provider: any) {
 
   }
+
   abstract moveTo(top?: number, left?: number) : void;
   abstract close(force?: boolean): void;
   abstract show() : void;

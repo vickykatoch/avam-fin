@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { AppHostProvider, WinInfo } from '$avam-core';
+import { Component, ViewContainerRef } from '@angular/core';
+import { AppHostProvider, WinInfo, ComponentManagerService } from '$avam-core';
+import { SystemDepthHostComponent } from './components/system-depth-host/system-depth-host.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,9 @@ import { AppHostProvider, WinInfo } from '$avam-core';
 })
 export class AppComponent {
   title = 'Openfin Playground';
-  constructor(private appHostProvider: AppHostProvider){}
+  constructor(private componentManagerService: ComponentManagerService, private vc : ViewContainerRef){
+    this.componentManagerService.registerComponent('SYSTEM-DEPTH-HOST',SystemDepthHostComponent, 400,300);
+  }
 
   onCreateWindow() {
     const winInfo :  WinInfo = {
@@ -18,9 +21,6 @@ export class AppComponent {
       height : 500,
       width : 400
     };
-    this.appHostProvider.createWindow(winInfo,'http://localhost:4200/popup.html').then(win=> {
-      console.log('Window Created Successfully');
-      win.show();
-    });
+    this.componentManagerService.createPopupComponent('SYSTEM-DEPTH-HOST', this.vc,winInfo).then(isTrue=> console.log(isTrue));
   }
 }
