@@ -23,6 +23,8 @@ export class ComponentManagerService {
         .then(winHost => {
           const compDef = this.componentsDefinitionMap.get(componentName);
           const component = ComponentBuilder.build(vc, compDef, this.injector);
+          const compBase = component.instance as IComponentBase;
+          compBase.viewHost = winHost;
           winHost.provider.contentWindow.document.body.appendChild(component.location.nativeElement);
           this.findStyles(compDef.name).then(styles => {
             this.appendStyles(winHost.provider, styles);

@@ -1,11 +1,12 @@
 import { WindowProvider } from "../host";
 import { ComponentState } from "../models";
+import { TemplateRef } from "@angular/core";
 
 export interface IComponentBase {
   viewHost : WindowProvider;
   title :string;
   state : ComponentState;
-
+  template?: TemplateRef<any>;
 
   dispose() : void;
 
@@ -16,10 +17,10 @@ export interface IComponentBase {
 }
 
 export abstract class ComponentBase implements IComponentBase {
-
   viewHost: WindowProvider;
   title: string;
   state: ComponentState;
+  template?: TemplateRef<any>;
 
   setState(state: any) : void {
 

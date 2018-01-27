@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+
 
 @Component({
   selector: 'avam-window-chrome',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./avam-window-chrome.component.scss']
 })
 export class AvamWindowChromeComponent implements OnInit {
+  @Output() close = new EventEmitter();
+
 
   constructor() { }
 
