@@ -14,5 +14,11 @@ export class SystemDepthHostComponent extends ComponentBase {
 
   ngOnInit() {
   }
-
+  onDrag(value : number) {
+    return value*2;
+  }
+  onDragOver(val: number) : boolean {
+    console.log(val);
+    return true;
+  }
 }
