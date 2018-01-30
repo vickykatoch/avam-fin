@@ -5,6 +5,7 @@
   <div WIN-BODY>
     <h1 avamDraggable [dragStart]="onDrag(10)">Hi There</h1>
     <h1>No Dragging</h1>
+    <button class="btn btn-primary btn-sm" (click)="onClick()">Show</button>
     <div avamDropTarget style="height:100px;width:100%;border:1px solid red" [dragOver]="onDragOver(15)">
     </div>
   </div>
