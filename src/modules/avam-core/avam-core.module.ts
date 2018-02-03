@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentManagerService, TemplateStoreService } from './controls';
+import { ThemeService } from './services/theme.service';
 
 @NgModule({
   imports: [
@@ -9,7 +10,8 @@ import { ComponentManagerService, TemplateStoreService } from './controls';
   declarations: [],
   providers : [
     ComponentManagerService,
-    TemplateStoreService
+    TemplateStoreService,
+    ThemeService
   ]
 })
 export class AvamCoreModule { }

@@ -1,5 +1,5 @@
 import { Component, ViewContainerRef } from '@angular/core';
-import { AppHostProvider, WinInfo, ComponentManagerService } from '$avam-core';
+import { AppHostProvider, WinInfo, ComponentManagerService, ThemeService } from '$avam-core';
 import { SystemDepthHostComponent } from './components/system-depth-host/system-depth-host.component';
 
 @Component({
@@ -9,7 +9,9 @@ import { SystemDepthHostComponent } from './components/system-depth-host/system-
 })
 export class AppComponent {
   title = 'Openfin Playground';
-  constructor(private componentManagerService: ComponentManagerService, private vc : ViewContainerRef){
+  constructor(private componentManagerService: ComponentManagerService, 
+    private themeService : ThemeService,
+      private vc : ViewContainerRef){
     this.componentManagerService.registerComponent('SYSTEM-DEPTH-HOST',SystemDepthHostComponent, 400,300);
   }
 
@@ -22,5 +24,8 @@ export class AppComponent {
       width : 400
     };
     this.componentManagerService.createPopupComponent('SYSTEM-DEPTH-HOST', this.vc,winInfo).then(isTrue=> console.log(isTrue));
+  }
+  selectTheme(themeName: string) {
+    this.themeService.setTheme(themeName);
   }
 }
