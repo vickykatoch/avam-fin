@@ -8,6 +8,8 @@ import { FlyNotificationService } from '$avam-common-controls';
   styleUrls: ['./system-depth-host.component.scss']
 })
 export class SystemDepthHostComponent extends ComponentBase {
+  isDisabled: boolean = false;
+  isDemo = false;
 
   constructor(private notificatinService: FlyNotificationService) {
     super()
@@ -19,20 +21,22 @@ export class SystemDepthHostComponent extends ComponentBase {
     return value * 2;
   }
   onDragOver(val: number): boolean {
-    console.log(val);
+    // console.log(val);
     return true;
   }
   onClick(): void {
     this.notificatinService.setTarget(this.viewHost.provider.contentWindow.document.body);
-    this.notificatinService.success('Hi There', 'hello');
-    setTimeout(() => {
-      this.notificatinService.warn('Hi There', 'hello');
-    }, 0);
-    setTimeout(() => {
-      this.notificatinService.info('Hi There', 'hello');
-    }, 15);
-    setTimeout(() => {
-      this.notificatinService.error('Hi There', 'hello');
-    }, 30);
+    console.log(this.isDemo);
+    this.isDisabled=!this.isDisabled;
+    // this.notificatinService.success('Hi There', 'hello');
+    // setTimeout(() => {
+    //   this.notificatinService.warn('Hi There', 'hello');
+    // }, 0);
+    // setTimeout(() => {
+    //   this.notificatinService.info('Hi There', 'hello');
+    // }, 15);
+    // setTimeout(() => {
+    //   this.notificatinService.error('Hi There', 'hello');
+    // }, 30);
   }
 }

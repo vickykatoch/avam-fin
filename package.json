@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "launch" : "openfin --launch --config=http://localhost:4200/assets/app.json",
     "start": "ng serve",
     "build": "ng build --prod --aot",
     "test": "ng test",

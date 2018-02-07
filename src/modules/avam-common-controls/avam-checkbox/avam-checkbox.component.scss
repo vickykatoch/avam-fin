@@ -1,0 +1,19 @@
+.avam-checkbox {
+    user-select: none;
+
+    .clickable {
+        cursor: pointer;
+    }
+    .icon {
+        border : 1px solid gray;
+        
+    }
+    .uncheck {
+        color : #fff;
+    }
+    .disabled {
+        pointer-events: none;
+        color : lightgray;
+        cursor: not-allowed;
+    }
+}

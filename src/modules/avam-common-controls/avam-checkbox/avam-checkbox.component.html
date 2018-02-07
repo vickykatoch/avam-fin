@@ -1,0 +1,6 @@
+<div class="avam-checkbox" >
+  <span (click)="toggleValue()" class="clickable" [class.disabled]="isDisabled">
+    <i class="fa fa-check icon" [class.uncheck]="!value"></i>
+  </span>
+  <span (click)="toggleValue()" class="clickable" [class.disabled]="isDisabled">{{label}}</span>
+</div>

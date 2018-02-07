@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { AvamCommonControlsModule } from '$avam-common-controls';
 import { AvamCoreModule } from '$avam-core';
 import { AvamFinModule } from '$avam-fin';
 import { SystemDepthHostComponent } from './components/system-depth-host/system-depth-host.component';
 import { AppTemplateStoreComponent } from './components/app-template-store/app-template-store.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -20,6 +20,7 @@ import { AppTemplateStoreComponent } from './components/app-template-store/app-t
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AvamCoreModule,
     AvamCommonControlsModule,
     AvamFinModule
